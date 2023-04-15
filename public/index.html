@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tailwind Single Page</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="font-sans text-gray-800">
+  <!-- header -->
+  <header class="flex items-center justify-between py-4 px-6 bg-white fixed opacity-90 z-10 w-full">
+    <div>
+      <p class="text-green-600 font-bold text-xl">My Company</p>
+    </div>
+    <div id="openMenu" class="flex md:hidden">
+      <button type="button" class="text-gray-500 hover:text-gray-600 focus:outline-none focus:text-gray-600"
+        aria-label="toggle menu">
+        <svg viewBox="0 0 24 24" class="h-11 w-11 fill-green-600">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M3 6h18v2H3V6zm0 5h18v2H3v-2zm0 5h18v2H3v-2z" />
+        </svg>
+      </button>
+    </div>
+    <nav class="hidden md:flex space-x-10">
+      <a href="#" class="link">Home</a>
+      <a href="#" class="link">About</a>
+      <a href="#" class="link">Contact</a>
+    </nav>
+  </header>
+
+  <!-- mobile menu -->
+  <nav id="menu" class="fixed bg-gray-900 w-full h-full z-20 translate-x-full ease-in-out duration-300 delay-150">
+    <div class="h-full">
+      <div class="block absolute right-0 top-0 p-4">
+        <svg id="closeMenu" xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 96 960 960" width="48"
+          class="h-11 w-11 fill-white cursor-pointer hover:fill-green-600">
+          <path d="m249 849-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z" />
+        </svg>
+      </div>
+      <div class="flex flex-col	justify-center items-center mt-20">
+        <a href="#" class="link mt-4">Home</a>
+        <a href="#" class="link mt-4">About</a>
+        <a href="#" class="link mt-4">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- banner -->
+  <section class="container mx-auto mb-8 pt-24">
+    <div class="flex flex-col items-center m-4 mt-0 md:flex-row">
+      <div class="p-6 md:w-1/2">
+        <h1 class="text-4xl leading-9	font-bold mb-8">Welcome to My Company</h1>
+        <p class="text-xl	">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id venenatis
+          nisi, non fermentum lectus. In vel nibh nec eros commodo commodo. Suspendisse potenti.</p>
+        <button
+          class="mt-8 border-2 border-green-600 hover:border-green-700 text-green-600 font-semibold py-2 px-7 rounded-full transition-all hover:scale-105">
+          See More
+        </button>
+      </div>
+      <div class="m-4 md:w-1/2">
+        <img class="rounded-lg" src="img/graphics/24.png" alt="">
+      </div>
+    </div>
+  </section>
+
+  <!-- What we do -->
+  <section class="bg-slate-100">
+    <div class="container mx-auto py-24 px-4">
+      <div class="text-center mb-4">
+        <h2 class="text-2xl text-green-600 mb-4">WHAT WE DO</h2>
+        <h2 class="text-4xl font-semibold">We've got everything you need to <br> launch and grow your business</h2>
+        <hr class="w-3/4 my-11 mx-auto">
+      </div>
+      <div class="flex flex-col  md:flex-row">
+        <div class="flex flex-col items-center w-full lg:flex-row lg:items-start md:w-1/2 p-6">
+          <svg class="w-full mb-4 fill-green-600" xmlns="http://www.w3.org/2000/svg" height="70" viewBox="0 96 960 960"
+            width="70">
+            <path
+              d="M437 976q-24 0-42-17.625T377 916V716H220q-24 0-42-18t-18-42V353q0-55 39.656-96T295 216h505v440q0 24-18 42t-42 18H583v200q0 24.75-18 42.375T523 976h-86ZM220 502h520V276h-56v171h-60V276h-71v85h-60v-85H295q-32 0-53.5 23T220 353v149Zm0 154h520v-94H220v94Zm0-94v94-94Z" />
+          </svg>
+          <div class="text-center lg:text-left">
+            <h2 class="text-3xl font-medium my-2">Brand Identity</h2>
+            <p class="mt-3">Memo cupiditate ab quibusdam quaerat impedit magni. Earum suscipit ipsum laudantium. Quo
+              delectus est. Maiores voluptas ab sit natus veritatis ut. Debitis nulla cumque veritatis. Sunt
+              suscipit
+              voluptas ipsa in tempora esse soluta sint.</p>
+          </div>
+        </div>
+        <div class="flex flex-col items-center w-full lg:flex-row lg:items-start md:w-1/2 p-6">
+          <svg class="w-full mb-4 fill-green-600" xmlns="http://www.w3.org/2000/svg" height="70" viewBox="0 96 960 960"
+            width="70">
+            <path
+              d="M620 976v-95L310 726H120V506h175l125-140V176h220v220H474L340 546v129l280 139v-58h220v220H620ZM480 336h100V236H480v100ZM180 666h100V566H180v100Zm500 250h100V816H680v100ZM530 286ZM230 616Zm500 250Z" />
+          </svg>
+          <div class="text-center lg:text-left">
+            <h2 class="text-3xl font-medium my-2">Illustration</h2>
+            <p class="mt-3">Memo cupiditate ab quibusdam quaerat impedit magni. Earum suscipit ipsum laudantium. Quo
+              delectus est. Maiores voluptas ab sit natus veritatis ut. Debitis nulla cumque veritatis. Sunt
+              suscipit
+              voluptas ipsa in tempora esse soluta sint.</p>
+          </div>
+        </div>
+      </div>
+      <div class="flex flex-col  md:flex-row">
+        <div class="flex flex-col items-center w-full lg:flex-row lg:items-start md:w-1/2 p-6">
+          <svg class="w-full mb-4 fill-green-600" xmlns="http://www.w3.org/2000/svg" height="70" viewBox="0 96 960 960"
+            width="70">
+            <path
+              d="M442 912q-35.062 0-60.031-24.5T357 827.956q0-35.045 24.969-60Q406.938 743 442 743l24.75-23.742Q475 711 486.156 706q11.156-5 22.844-5 25 0 42 17.5t17 42.225V779q0 20 14.5 34.5T617 828q15.804 0 28.446-9.554 12.643-9.554 17.911-24.415L676 759q9-26 30.039-42.025 21.039-16.026 48.39-16.026Q766 672 772.5 640q6.5-32 6.5-65 0-94-46.5-170.5T610 283v39q0 34.65-24.675 59.325Q560.65 406 526 406h-42v85q0 17-12.5 29.5T442 533h-42v71.022Q400 627 384.135 643 368.269 659 345 659q-14 0-26.5-6.5T298 635l-67.077-102H189v41.69q0 32.31-21.5 55.81T115 658q28 109 118.749 181.5T442 912Zm84.459-253Q509 659 496.5 646.5T484 617q0-17 12.5-29.5t29.959-12.5h41.082Q585 575 597.5 587.5T610 617q0 17-12.5 29.5T567.541 659h-41.082Zm97.926-126Q604 533 591 516.5q-13-16.5-6.429-36.405L601 434q5-13 15.192-20.5 10.193-7.5 22.423-7.5Q659 406 672 422.5q13 16.5 6.429 36.405L662 505q-5 13-15.192 20.5-10.193 7.5-22.423 7.5ZM442.266 976q-82.734 0-155.5-31.5t-127.266-86Q105 804 73.5 731.159 42 658.319 42 575.5q0-82.819 31.5-155.659Q105 347 159.5 293t127.341-85.5Q359.681 176 442.5 176q82.819 0 155.659 31.5Q671 239 725 293t85.5 127Q842 493 842 575.734q0 82.734-31.5 155.5T725 858.316q-54 54.316-127 86Q525 976 442.266 976Z" />
+          </svg>
+          <div class="text-center lg:text-left">
+            <h2 class="text-3xl font-medium my-2">Web Design</h2>
+            <p class="mt-3">Memo cupiditate ab quibusdam quaerat impedit magni. Earum suscipit ipsum laudantium. Quo
+              delectus est. Maiores voluptas ab sit natus veritatis ut. Debitis nulla cumque veritatis. Sunt
+              suscipit
+              voluptas ipsa in tempora esse soluta sint.</p>
+          </div>
+        </div>
+        <div class="flex flex-col items-center w-full lg:flex-row lg:items-start md:w-1/2 p-6">
+          <svg class="w-full mb-4 fill-green-600" xmlns="http://www.w3.org/2000/svg" height="70" viewBox="0 96 960 960"
+            width="70">
+            <path
+              d="M140 936q-24 0-42-18t-18-42V387q0-24 18-42t42-18h190v-91q0-24 18-42t42-18h180q24 0 42 18t18 42v91h190q24 0 42 18t18 42v489q0 24-18 42t-42 18H140Zm250-609h180v-91H390v91Zm430 358H571v60H391v-60H140v191h680V685Zm-369 0h60v-60h-60v60Zm-311-60h251v-60h180v60h249V387H140v238Zm340 30Z" />
+          </svg>
+          <div class="text-center lg:text-left">
+            <h2 class="text-3xl font-medium my-2">Web Development</h2>
+            <p class="mt-3">Memo cupiditate ab quibusdam quaerat impedit magni. Earum suscipit ipsum laudantium. Quo
+              delectus est. Maiores voluptas ab sit natus veritatis ut. Debitis nulla cumque veritatis. Sunt
+              suscipit
+              voluptas ipsa in tempora esse soluta sint.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3 boxes -->
+  <section class="container mx-auto my-24 px-4">
+    <div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-6">
+      <!-- First box -->
+      <div class="flex flex-col">
+        <img src="img/graphics/3.png" alt="">
+        <div class="p-6 text-center">
+          <h2 class="text-3xl font-bold leading-8">Work and Have Fun</h2>
+          <p class="mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id venenatis
+            nisi,
+            non fermentum lectus. In vel nibh nec eros commodo commodo. Suspendisse potenti.</p>
+        </div>
+      </div>
+      <!-- Second box -->
+      <div class="flex flex-col">
+        <img src="img/graphics/4.png" alt="">
+        <div class="p-6 text-center">
+          <h2 class="text-3xl font-bold leading-8">Share Knowledge</h2>
+          <p class="mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id venenatis
+            nisi,
+            non fermentum lectus. In vel nibh nec eros commodo commodo. Suspendisse potenti.</p>
+        </div>
+      </div>
+      <!-- Third box -->
+      <div class="flex flex-col">
+        <img src="img/graphics/5.png" alt="">
+        <div class="p-6 text-center">
+          <h2 class="text-3xl font-bold leading-8">Boost Your Career</h2>
+          <p class="mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id venenatis
+            nisi,
+            non fermentum lectus. In vel nibh nec eros commodo commodo. Suspendisse potenti.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Articles -->
+  <section class="bg-slate-100 py-4">
+    <div class="container mx-auto my-8">
+      <div class="flex flex-col items-center m-4 md:flex-row">
+        <!-- First article -->
+        <div class="m-4 md:w-2/6">
+          <img class="rounded-lg" src="img/graphics/22.png" alt="">
+        </div>
+        <div class="flex flex-col p-6 md:w-4/6">
+          <h2 class="text-3xl font-bold leading-8 mb-5">The Future of Web Development</h2>
+          <p class="mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id venenatis
+            nisi, non fermentum lectus. In vel nibh nec eros commodo commodo. Suspendisse potenti. Lorem ipsum dolor
+            sit amet, consectetur adipiscing elit. Sed id venenatis nisi, non fermentum lectus. In vel nibh nec eros
+            commodo commodo. Suspendisse potenti.
+            nisi, non fermentum lectus. In vel nibh nec eros commodo commodo. Suspendisse potenti. Lorem ipsum dolor
+            sit amet, consectetur adipiscing elit. Sed id venenatis nisi, non fermentum lectus. In vel nibh nec eros
+            commodo commodo. Suspendisse potenti.</p>
+          <div class="flex flex-row mt-6">
+            <a href=""><img class="w-12 transition-all hover:scale-105" src="img/socials/fb.png" alt="fb"></a>
+            <a href=""><img class="w-12 transition-all hover:scale-105" src="img/socials/instagram.png"
+                alt="instagram"></a>
+            <a href=""><img class="w-12 transition-all hover:scale-105" src="img/socials/twitter.png" alt="twitter"></a>
+          </div>
+        </div>
+      </div>
+      <!-- Second article -->
+      <div class="flex flex-col items-center m-4 md:flex-row-reverse">
+        <div class="m-4 md:w-2/6">
+          <img class="rounded-lg" src="img/graphics/23.png" alt="">
+        </div>
+        <div class="p-6 md:w-4/6">
+          <h2 class="text-3xl font-bold leading-8 mb-5">Emerging Technologies and Trends to Watch</h2>
+          <p class="mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id venenatis
+            nisi, non fermentum lectus. In vel nibh nec eros commodo commodo. Suspendisse potenti. Lorem ipsum dolor
+            sit amet, consectetur adipiscing elit. Sed id venenatis nisi, non fermentum lectus. In vel nibh nec eros
+            commodo commodo. Suspendisse potenti. Suspendisse potenti. Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit. Sed id venenatis nisi, non fermentum lectus. In vel nibh nec eros commodo commodo.
+            Suspendisse potenti.</p>
+          <div class="flex flex-row mt-6">
+            <a href=""><img class="w-12 transition-all hover:scale-105" src="img/socials/fb.png" alt="fb"></a>
+            <a href=""><img class="w-12 transition-all hover:scale-105" src="img/socials/instagram.png"
+                alt="instagram"></a>
+            <a href=""><img class="w-12 transition-all hover:scale-105" src="img/socials/twitter.png" alt="twitter"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section class="container mx-auto my-24 px-4">
+    <div class="text-center mb-4">
+      <h2 class="text-2xl text-green-600 mb-4">GALLERY</h2>
+      <h2 class="text-4xl font-semibold">Visualizing Data: A Gallery of Graphs for Analysis</h2>
+      <hr class="w-3/4 my-11 mx-auto">
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-6">
+      <!-- First img -->
+      <div class="overflow-hidden">
+        <img src="img/graphics/19.png" alt="" class="cursor-pointer transition-all hover:scale-105 openModal">
+        <div class="py-6 text-center">
+          <p class="text-lg leading-8">Online Sales Growth by Year</p>
+        </div>
+      </div>
+      <!-- Second img -->
+      <div class="overflow-hidden">
+        <img src="img/graphics/21.png" alt="" class="cursor-pointer transition-all hover:scale-105 openModal">
+        <div class="py-6 text-center">
+          <p class="text-lg leading-8">Strategies for Small Business Owners</p>
+        </div>
+      </div>
+      <!-- Third img -->
+      <div class="overflow-hidden">
+        <img src="img/graphics/20.png" alt="" class="cursor-pointer transition-all hover:scale-105 openModal">
+        <div class="py-6 text-center">
+          <p class="text-lg leading-8">The Power of Social Media</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- modal layout -->
+  <div id="modal"
+    class="fixed z-50 top-0 left-0 w-full h-full flex items-center justify-center bg-gray-900 bg-opacity-50 hidden">
+    <div class="bg-white rounded-lg p-4 m-4 max-w-2xl">
+      <img id="modal-image" src="" class="w-full h-auto">
+      <svg xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 96 960 960" width="48"
+        class="h-11 w-11 fill-gray-800 cursor-pointer p-1 closeModal">
+        <path d="m249 849-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z" />
+      </svg>
+    </div>
+  </div>
+
+  <!-- Articles -->
+  <section class="bg-slate-100 py-4">
+    <div class="container mx-auto my-8">
+      <div class="flex flex-col items-center m-4 md:flex-row-reverse">
+        <!-- First article -->
+        <div class="p-6 md:w-4/6">
+          <h2 class="text-3xl font-bold leading-8">A Look Back and a Glimpse into the Future</h2>
+          <p class="mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id venenatis
+            nisi, non fermentum lectus. In vel nibh nec eros commodo commodo. Suspendisse potenti. Lorem ipsum dolor
+            sit amet, consectetur adipiscing elit. Sed id venenatis nisi, non fermentum lectus. In vel nibh nec eros
+            commodo commodo. Suspendisse potenti. Suspendisse potenti. Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit. Sed id venenatis nisi, non fermentum lectus. In vel nibh nec eros commodo commodo.
+            Suspendisse potenti.</p>
+          <div class="flex flex-row mt-6">
+            <a href=""><img class="w-12 transition-all hover:scale-105" src="img/socials/fb.png" alt="fb"></a>
+            <a href=""><img class="w-12 transition-all hover:scale-105" src="img/socials/instagram.png"
+                alt="instagram"></a>
+            <a href=""><img class="w-12 transition-all hover:scale-105" src="img/socials/twitter.png" alt="twitter"></a>
+          </div>
+        </div>
+        <div class="m-4 md:w-2/6">
+          <img class="rounded-lg" src="img/graphics/12.png" alt="">
+        </div>
+      </div>
+      <!-- Second article -->
+      <div class="flex flex-col items-center m-4 md:flex-row">
+        <div class="p-6 md:w-4/6">
+          <h2 class="text-3xl font-bold leading-8">The Pros and Cons of Social Media</h2>
+          <p class="mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id venenatis
+            nisi, non fermentum lectus. In vel nibh nec eros commodo commodo. Suspendisse potenti. Lorem ipsum dolor
+            sit amet, consectetur adipiscing elit. Sed id venenatis nisi, non fermentum lectus. In vel nibh nec eros
+            commodo commodo. Suspendisse potenti. Suspendisse potenti. Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit. Sed id venenatis nisi, non fermentum lectus. In vel nibh nec eros commodo commodo.
+            Suspendisse potenti.</p>
+          <div class="flex flex-row mt-6">
+            <a href=""><img class="w-12 transition-all hover:scale-105" src="img/socials/fb.png" alt="fb"></a>
+            <a href=""><img class="w-12 transition-all hover:scale-105" src="img/socials/instagram.png"
+                alt="instagram"></a>
+            <a href=""><img class="w-12 transition-all hover:scale-105" src="img/socials/twitter.png" alt="twitter"></a>
+          </div>
+        </div>
+        <div class="m-4 md:w-2/6">
+          <img class="rounded-lg" src="img/graphics/15.png" alt="">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team -->
+  <section class="container mx-auto my-24 px-4">
+    <div class="text-center mb-4">
+      <h2 class="text-2xl text-green-600 mb-4">OUR TEAM</h2>
+      <h2 class="text-4xl font-semibold">Meat Our Team</h2>
+      <hr class="w-3/4 my-11 mx-auto">
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-4 lg:grid-cols-4 gap-6">
+      <!-- First box -->
+      <div class="overflow-hidden shadow-md shadow-slate-400 rounded-2xl">
+        <img class="rounded-t-2xl" src="img/team/01.png" alt="">
+        <div class="py-6 text-center">
+          <h2 class="text-lg font-semibold">James Smith</h2>
+          <p class="leading-8">UI / UX Designer</p>
+          <div class="flex flex-row justify-center mt-4">
+            <a href=""><img class="w-7 transition-all hover:scale-105" src="img/socials/fb.png" alt="fb"></a>
+            <a href=""><img class="w-7 transition-all hover:scale-105" src="img/socials/instagram.png"
+                alt="instagram"></a>
+            <a href=""><img class="w-7 transition-all hover:scale-105" src="img/socials/twitter.png" alt="twitter"></a>
+          </div>
+        </div>
+      </div>
+      <!-- Second box -->
+      <div class="overflow-hidden shadow-md shadow-slate-400 rounded-2xl">
+        <img class="rounded-t-2xl" src="img/team/02.png" alt="">
+        <div class="py-6 text-center">
+          <h2 class="text-lg font-semibold">Emma Johnson</h2>
+          <p class="leading-8">Creative Directo</p>
+          <div class="flex flex-row justify-center mt-4">
+            <a href=""><img class="w-7 transition-all hover:scale-105" src="img/socials/fb.png" alt="fb"></a>
+            <a href=""><img class="w-7 transition-all hover:scale-105" src="img/socials/instagram.png"
+                alt="instagram"></a>
+            <a href=""><img class="w-7 transition-all hover:scale-105" src="img/socials/twitter.png" alt="twitter"></a>
+          </div>
+        </div>
+      </div>
+      <!-- Third box -->
+      <div class="overflow-hidden shadow-md shadow-slate-400 rounded-2xl">
+        <img class="rounded-t-2xl" src="img/team/03.png" alt="">
+        <div class="py-6 text-center">
+          <h2 class="text-lg font-semibold">William Brown</h2>
+          <p class="leading-8">Software Engineer</p>
+          <div class="flex flex-row justify-center mt-4">
+            <a href=""><img class="w-7 transition-all hover:scale-105" src="img/socials/fb.png" alt="fb"></a>
+            <a href=""><img class="w-7 transition-all hover:scale-105" src="img/socials/instagram.png"
+                alt="instagram"></a>
+            <a href=""><img class="w-7 transition-all hover:scale-105" src="img/socials/twitter.png" alt="twitter"></a>
+          </div>
+        </div>
+      </div>
+      <!-- Fourth box -->
+      <div class="overflow-hidden shadow-md shadow-slate-400 rounded-2xl">
+        <img class="rounded-t-2xl" src="img/team/04.png" alt="">
+        <div class="py-6 text-center">
+          <h2 class="text-lg font-semibold">Charlotte Taylor</h2>
+          <p class="leading-8">Social Media</p>
+          <div class="flex flex-row justify-center mt-4">
+            <a href=""><img class="w-7 transition-all hover:scale-105" src="img/socials/fb.png" alt="fb"></a>
+            <a href=""><img class="w-7 transition-all hover:scale-105" src="img/socials/instagram.png"
+                alt="instagram"></a>
+            <a href=""><img class="w-7 transition-all hover:scale-105" src="img/socials/twitter.png" alt="twitter"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-300 pb-8 pt-16">
+    <div class="text-center mb-4">
+      <h2 class="text-green-500 text-2xl mb-4">CONTACT US</h2>
+      <h2 class="text-3xl px-4">Reach Out For a New Project or Just Say Hello</h2>
+    </div>
+    <!-- Contact form -->
+    <div class="container mx-auto items-start py-8 px-4 md:flex md:items-stretch">
+      <form class="p-4 md:w-2/3">
+        <h2 class="text-2xl font-bold mb-4">Contact Form</h2>
+        <div class="mb-4">
+          <input type="text" name="name" placeholder="Name"
+            class="border-b-2 border-gray-400 focus:border-green-500 focus:outline-none py-2 px-4 w-full bg-transparent">
+        </div>
+        <div class="mb-4">
+          <input type="email" name="email" placeholder="Email"
+            class="border-b-2 border-gray-400 focus:border-green-500 focus:outline-none py-2 px-4 w-full bg-transparent">
+        </div>
+        <div class="mb-4">
+          <input type="tel" name="phone" placeholder="Phone"
+            class="border-b-2 border-gray-400 focus:border-green-500 focus:outline-none py-2 px-4 w-full bg-transparent">
+        </div>
+        <div class="mb-4">
+          <textarea name="message" placeholder="Message"
+            class="border-b-2 border-gray-400 focus:border-green-500 focus:outline-none py-2 px-4 w-full bg-transparent h-40"></textarea>
+        </div>
+        <div class="mb-4">
+          <button type="submit" class="bg-green-500 hover:opacity-80 text-white py-2 px-10 rounded">SEND</button>
+        </div>
+      </form>
+      <!-- Contact info -->
+      <div class="flex flex-col items-stretch p-4 bg-gray-800 md:w-1/3">
+        <h2 class="text-2xl font-bold mb-4">Contact Info</h2>
+        <p class="text-green-500 font-semibold mt-4">Where to Find Us</p>
+        <p class="mb-4">123 Main St<br>Anytown, USA 12345</p>
+        <p class="text-green-500 font-semibold mt-4">Email Us At</p>
+        <p class="mb-4">Email: info@example.com</p>
+        <p class="text-green-500 font-semibold mt-4">Call Us At</p>
+        <p class="mb-4">Phone: (123) 456-7890</p>
+      </div>
+    </div>
+
+    <div class="container mx-auto flex flex-col-reverse items-start md:flex-row md:items-center justify-between px-4">
+      <p class="text-sm font-bold mt-4">&copy; 2023 Company Name. All rights reserved.</p>
+      <ul class="flex flex-col md:flex-row">
+        <li><a href="#" class="link mx-3">Privacy Policy</a></li>
+        <li><a href="#" class="link mx-3">Terms of Service</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
